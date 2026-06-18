@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisiDigital Odienné - Expert Google pour Artisans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0A0F1E;
+            color: #E0F2FE;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #0D1526;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1A253F;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav .logo span {
+            color: #3B82F6;
+        }
+        nav a {
+            color: #94A3B8;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .btn-nav {
+            background: linear-gradient(135deg, #2563EB, #7C3AED);
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .btn-nav:hover {
+            opacity: 0.85;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: #0A0F1E;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero h1 span {
+            color: #3B82F6;
+        }
+        .hero p {
+            color: #94A3B8;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #2563EB, #3B82F6);
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #1A253F;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn-ghost:hover {
+            background: #111827;
+        }
+        .hero-phone {
+            display: block;
+            margin-top: 20px;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .hero-phone:hover {
+            color: #fff;
+        }
+
+        /* STATS */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .stats div {
+            text-align: center;
+        }
+        .stats .number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #3B82F6;
+        }
+        .stats .number.violet {
+            color: #8B5CF6;
+        }
+        .stats .label {
+            font-size: 0.7rem;
+            color: #94A3B8;
+            text-transform: uppercase;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+        }
+        .section-title h2 span {
+            color: #3B82F6;
+        }
+        .section-title p {
+            color: #94A3B8;
+            max-width: 500px;
+            margin: 10px auto 0;
+        }
+
+        /* SERVICES */
+        #services {
+            background: #0D1526;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: #111827;
+            border: 1px solid #1A253F;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+        }
+        .service-card.highlight {
+            border: 2px solid #2563EB;
+        }
+        .service-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #94A3B8;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .service-card .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .service-card .price span {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            font-weight: normal;
+        }
+        .service-card .guarantee {
+            color: #3B82F6;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin: 10px 0;
+        }
+        .service-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 15px 0;
+        }
+        .service-card ul li {
+            color: #94A3B8;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+        .service-card ul li::before {
+            content: '✅ ';
+            color: #3B82F6;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            background: linear-gradient(135deg, #2563EB, #7C3AED);
+            color: #fff;
+        }
+        .btn-block:hover {
+            opacity: 0.85;
+        }
+        .btn-block-outline {
+            background: transparent;
+            border: 1px solid #1A253F;
+            color: #fff;
+        }
+        .btn-block-outline:hover {
+            background: #1A253F;
+        }
+
+        /* WHY */
+        #why {
+            background: #0A0F1E;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .why-card {
+            background: #111827;
+            border: 1px solid #1A253F;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .why-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .why-card h4 {
+            font-size: 1rem;
+        }
+        .why-card p {
+            color: #94A3B8;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* TESTIMONIALS */
+        #testimonials {
+            background: #0D1526;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .testimonial-card {
+            background: #111827;
+            border: 1px solid #1A253F;
+            border-radius: 16px;
+            padding: 25px;
+        }
+        .testimonial-card .stars {
+            color: #F59E0B;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .testimonial-card p {
+            color: #94A3B8;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-card .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563EB, #7C3AED);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        .testimonial-card .name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .testimonial-card .role {
+            color: #94A3B8;
+            font-size: 0.78rem;
+        }
+
+        /* CONTACT */
+        #contact {
+            background: #0A0F1E;
+        }
+        .contact-card {
+            background: #111827;
+            border: 1px solid #1A253F;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .contact-card p {
+            color: #94A3B8;
+            margin-bottom: 20px;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-btn {
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-btn.whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+        .contact-btn.whatsapp:hover {
+            opacity: 0.85;
+        }
+        .contact-btn.call {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid #1A253F;
+            color: #fff;
+        }
+        .contact-btn.call:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .contact-email {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #94A3B8;
+        }
+        .contact-email a {
+            color: #3B82F6;
+            text-decoration: none;
+        }
+        .contact-email a:hover {
+            text-decoration: underline;
+        }
+
+        /* FORM */
+        .diagnostic-form {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #1A253F;
+        }
+        .diagnostic-form h4 {
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: #94A3B8;
+            margin-bottom: 4px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid #1A253F;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #2563EB;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2563EB, #7C3AED);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            opacity: 0.85;
+        }
+        .form-success {
+            display: none;
+            padding: 15px;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            border-radius: 12px;
+            color: #4ADE80;
+            margin-top: 15px;
+        }
+        .form-success.visible {
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0A0F1E;
+            border-top: 1px solid #1A253F;
+            padding: 20px;
+            text-align: center;
+            color: #94A3B8;
+            font-size: 0.8rem;
+        }
+        footer .footer-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+        footer a {
+            color: #94A3B8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 200;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .stats {
+                gap: 20px;
+            }
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-buttons {
+                flex-direction: column;
+            }
+            nav a {
+                margin-left: 10px;
+                font-size: 0.8rem;
+            }
+            .btn-nav {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .btn-primary,
+            .btn-ghost {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="logo">Visi<span>Digital</span></div>
+        <div>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Témoignages</a>
+            <a href="#contact" class="btn-nav">Diagnostic gratuit</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Soyez trouvé par vos clients<br /><span>dans votre quartier</span></h1>
+        <p>Je vous aide à être visible sur Google pour que les clients vous appellent. Plombiers, électriciens, maçons — je vous place dans le top 3 des recherches locales.</p>
+
+        <div>
+            <a href="#contact" class="btn-primary">📞 Obtenez + d'appels →</a>
+            <a href="#contact" class="btn-ghost">Diagnostic gratuit</a>
+        </div>
+        <a href="tel:+2250708632565" class="hero-phone">📱 +225 07 08 63 25 65</a>
+
+        <div class="stats">
+            <div><div class="number">3</div><div class="label">Artisans accompagnés</div></div>
+            <div><div class="number violet">+45</div><div class="label">Appels générés</div></div>
+            <div><div class="number">5★</div><div class="label">Satisfaction client</div></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Des solutions <span>qui fonctionnent</span></h2>
+                <p>Pas de jargon technique. Juste des résultats concrets : plus d'appels, plus de clients.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon">🔍</div>
+                    <h3>Audit de votre fiche Google</h3>
+                    <p>Je regarde votre fiche et celle de votre concurrent. Je vous montre ce qui manque.</p>
+                    <ul>
+                        <li>Analyse complète en 10 min</li>
+                        <li>Rapport clair et simple</li>
+                        <li>Sans engagement</li>
+                    </ul>
+                    <a href="#contact" class="btn-block btn-block-outline">Obtenir mon audit →</a>
+                </div>
+
+                <div class="service-card highlight">
+                    <div class="icon">📈</div>
+                    <h3>Pack Top 3 Artisan</h3>
+                    <p>Je vous place dans le top 3 des recherches Google dans votre quartier.</p>
+                    <div class="price">150 000 FCFA <span>/mois</span></div>
+                    <div class="guarantee">🔒 Garantie : +10 appels ou je continue gratuitement</div>
+                    <ul>
+                        <li>Optimisation complète de votre fiche</li>
+                        <li>Photos, description, mots-clés locaux</li>
+                        <li>Suivi hebdomadaire et rapport d'appels</li>
+                    </ul>
+                    <a href="https://wa.me/2250708632565?text=Bonjour%2C%20je%20suis%20artisan%20et%20je%20veux%20le%20Pack%20Top%203%20Artisan." class="btn-block">Je veux plus d'appels →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📱</div>
+                    <h3>Campagne d'appels</h3>
+                    <p>Je crée et gère une campagne Google Ads pour que votre téléphone sonne directement.</p>
+                    <ul>
+                        <li>Annonces ciblées sur votre quartier</li>
+                        <li>Bouton "Appeler" visible sur mobile</li>
+                        <li>Suivi des appels reçus</li>
+                    </ul>
+                    <a href="https://wa.me/2250708632565?text=Bonjour%2C%20je%20suis%20artisan%20et%20je%20veux%20une%20campagne%20d%27appels." class="btn-block btn-block-outline">Demander un devis →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi <span>me choisir ?</span></h2>
+                <p>Basé à Odienné, je connais le terrain et les artisans de la région.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon">📍</div>
+                    <h4>Basé à Odienné</h4>
+                    <p>Je suis à côté de vous, pas à Abidjan.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">📞</div>
+                    <h4>Résultats garantis</h4>
+                    <p>+10 appels ou je continue gratuitement.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🔧</div>
+                    <h4>Spécialiste BTP</h4>
+                    <p>Je connais les artisans et leurs besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Des artisans <span>comme vous</span></h2>
+                <p>Des résultats réels pour des professionnels du BTP à Odienné et dans la région.</p>
+            </div>
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Grâce à VisiDigital, ma fiche Google est maintenant bien visible. Je reçois plus d'appels de clients à Odienné et dans les environs. Je recommande !"</p>
+                    <div class="author">
+                        <div class="avatar">FS</div>
+                        <div>
+                            <div class="name">Fofana Sekou</div>
+                            <div class="role">Propriétaire, EDC Construction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class
