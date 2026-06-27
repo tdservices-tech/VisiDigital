@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VisiDigital Odienné - Expert Google pour Artisans</title>
+    <title>VisiDigital - Expert Google Business Profile en Côte d'Ivoire</title>
+    <meta name="description" content="VisiDigital aide les artisans et commerçants de Côte d'Ivoire à être visibles sur Google et à recevoir plus d'appels. Diagnostic gratuit." />
+    <link rel="canonical" href="https://www.visidigital.ci/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VisiDigital - Expert Google Business Profile en Côte d'Ivoire" />
+    <meta property="og:description" content="Soyez visible sur Google et recevez plus d'appels de clients. Diagnostic gratuit pour artisans et commerçants en Côte d'Ivoire." />
+    <meta property="og:url" content="https://www.visidigital.ci/" />
+    <meta property="og:locale" content="fr_CI" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="VisiDigital - Expert Google Business Profile en Côte d'Ivoire" />
+    <meta name="twitter:description" content="Soyez visible sur Google et recevez plus d'appels de clients en Côte d'Ivoire." />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "VisiDigital",
+        "image": "https://www.visidigital.ci/logo.png",
+        "description": "Accompagnement des artisans et commerçants de Côte d'Ivoire pour optimiser leur visibilité sur Google et générer plus d'appels clients.",
+        "telephone": "+2250708632565",
+        "email": "turaybusiness888@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Odienné",
+            "addressCountry": "CI"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Côte d'Ivoire"
+        },
+        "priceRange": "150000 FCFA",
+        "url": "https://www.visidigital.ci/"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -33,6 +65,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            flex-wrap: wrap;
         }
         nav .logo {
             color: #fff;
@@ -42,13 +75,18 @@
         nav .logo span {
             color: #3B82F6;
         }
-        nav a {
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
             color: #94A3B8;
             text-decoration: none;
-            margin-left: 20px;
             font-size: 0.9rem;
         }
-        nav a:hover {
+        .nav-links a:hover {
             color: #fff;
         }
         .btn-nav {
@@ -69,7 +107,7 @@
             background: #0A0F1E;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 20px;
         }
         .hero h1 span {
@@ -78,7 +116,7 @@
         .hero p {
             color: #94A3B8;
             font-size: 1.1rem;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 30px;
         }
         .btn-primary {
@@ -153,14 +191,14 @@
             margin-bottom: 40px;
         }
         .section-title h2 {
-            font-size: 2rem;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
         }
         .section-title h2 span {
             color: #3B82F6;
         }
         .section-title p {
             color: #94A3B8;
-            max-width: 500px;
+            max-width: 550px;
             margin: 10px auto 0;
         }
 
@@ -206,6 +244,11 @@
             color: #94A3B8;
             font-weight: normal;
         }
+        .service-card .price-note {
+            font-size: 0.75rem;
+            color: #94A3B8;
+            margin-top: 2px;
+        }
         .service-card .guarantee {
             color: #3B82F6;
             font-weight: 600;
@@ -249,9 +292,60 @@
             background: #1A253F;
         }
 
+        /* VIDEO */
+        #video {
+            background: #0A0F1E;
+        }
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .video-card {
+            background: #111827;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #1A253F;
+        }
+        .video-card video {
+            width: 100%;
+            display: block;
+        }
+        .video-card .info {
+            padding: 12px 16px;
+        }
+        .video-card .info .name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .video-card .info .role {
+            color: #94A3B8;
+            font-size: 0.8rem;
+        }
+
         /* WHY */
         #why {
-            background: #0A0F1E;
+            background: #0D1526;
         }
         .why-grid {
             display: grid;
@@ -282,7 +376,7 @@
 
         /* TESTIMONIALS */
         #testimonials {
-            background: #0D1526;
+            background: #0A0F1E;
         }
         .testimonials-grid {
             display: grid;
@@ -322,6 +416,7 @@
             font-weight: bold;
             color: #fff;
             font-size: 0.9rem;
+            flex-shrink: 0;
         }
         .testimonial-card .name {
             font-weight: 600;
@@ -334,7 +429,7 @@
 
         /* CONTACT */
         #contact {
-            background: #0A0F1E;
+            background: #0D1526;
         }
         .contact-card {
             background: #111827;
@@ -430,6 +525,18 @@
         .form-group select:focus {
             border-color: #2563EB;
         }
+        .form-group .field-error {
+            display: none;
+            color: #F87171;
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .form-group.invalid input {
+            border-color: #F87171;
+        }
+        .form-group.invalid .field-error {
+            display: block;
+        }
         .btn-submit {
             width: 100%;
             padding: 12px;
@@ -443,6 +550,10 @@
         }
         .btn-submit:hover {
             opacity: 0.85;
+        }
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
         .form-success {
             display: none;
@@ -481,8 +592,8 @@
         /* WHATSAPP FLOAT */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: max(20px, env(safe-area-inset-bottom));
+            right: max(20px, env(safe-area-inset-right));
             z-index: 200;
             width: 60px;
             height: 60px;
@@ -501,6 +612,13 @@
 
         /* MOBILE */
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                justify-content: center;
+            }
             .hero h1 {
                 font-size: 1.8rem;
             }
@@ -508,7 +626,8 @@
                 gap: 20px;
             }
             .services-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .video-grid {
                 grid-template-columns: 1fr;
             }
             .why-grid {
@@ -516,14 +635,6 @@
             }
             .contact-buttons {
                 flex-direction: column;
-            }
-            nav a {
-                margin-left: 10px;
-                font-size: 0.8rem;
-            }
-            .btn-nav {
-                padding: 6px 12px;
-                font-size: 0.75rem;
             }
         }
         @media (max-width: 480px) {
@@ -536,6 +647,13 @@
                 width: 100%;
                 text-align: center;
             }
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            .btn-nav {
+                padding: 6px 14px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -544,8 +662,9 @@
     <!-- NAV -->
     <nav>
         <div class="logo">Visi<span>Digital</span></div>
-        <div>
+        <div class="nav-links">
             <a href="#services">Services</a>
+            <a href="#video">Vidéo</a>
             <a href="#testimonials">Témoignages</a>
             <a href="#contact" class="btn-nav">Diagnostic gratuit</a>
         </div>
@@ -553,8 +672,8 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Soyez trouvé par vos clients<br /><span>dans votre quartier</span></h1>
-        <p>Je vous aide à être visible sur Google pour que les clients vous appellent. Plombiers, électriciens, maçons — je vous place dans le top 3 des recherches locales.</p>
+        <h1>Soyez trouvé par vos clients<br /><span>partout en Côte d'Ivoire</span></h1>
+        <p>VisiDigital vous aide à être visible sur Google partout en Côte d'Ivoire. Plombiers, électriciens, maçons, commerçants — je vous accompagne pour viser le top 3 des recherches dans votre ville.</p>
 
         <div>
             <a href="#contact" class="btn-primary">📞 Obtenez + d'appels →</a>
@@ -563,8 +682,8 @@
         <a href="tel:+2250708632565" class="hero-phone">📱 +225 07 08 63 25 65</a>
 
         <div class="stats">
-            <div><div class="number">3</div><div class="label">Artisans accompagnés</div></div>
-            <div><div class="number violet">+45</div><div class="label">Appels générés</div></div>
+            <div><div class="number">100%</div><div class="label">Diagnostic gratuit & sans engagement</div></div>
+            <div><div class="number violet">24h</div><div class="label">Délai de réponse</div></div>
             <div><div class="number">5★</div><div class="label">Satisfaction client</div></div>
         </div>
     </section>
@@ -581,7 +700,9 @@
                 <div class="service-card">
                     <div class="icon">🔍</div>
                     <h3>Audit de votre fiche Google</h3>
-                    <p>Je regarde votre fiche et celle de votre concurrent. Je vous montre ce qui manque.</p>
+                    <p>VisiDigital analyse votre fiche et celle de vos concurrents, et vous montre ce qui manque.</p>
+                    <div class="price">Gratuit</div>
+                    <div class="price-note">Rapport livré sous 24h</div>
                     <ul>
                         <li>Analyse complète en 10 min</li>
                         <li>Rapport clair et simple</li>
@@ -593,9 +714,10 @@
                 <div class="service-card highlight">
                     <div class="icon">📈</div>
                     <h3>Pack Top 3 Artisan</h3>
-                    <p>Je vous place dans le top 3 des recherches Google dans votre quartier.</p>
+                    <p>VisiDigital optimise votre fiche pour viser le top 3 des recherches Google dans votre ville.</p>
                     <div class="price">150 000 FCFA <span>/mois</span></div>
-                    <div class="guarantee">🔒 Garantie : +10 appels ou je continue gratuitement</div>
+                    <div class="price-note">Engagement minimum 3 mois — le référencement local prend du temps</div>
+                    <div class="guarantee">🔒 Suivi hebdomadaire transparent + rapport d'appels chaque mois</div>
                     <ul>
                         <li>Optimisation complète de votre fiche</li>
                         <li>Photos, description, mots-clés locaux</li>
@@ -607,9 +729,11 @@
                 <div class="service-card">
                     <div class="icon">📱</div>
                     <h3>Campagne d'appels</h3>
-                    <p>Je crée et gère une campagne Google Ads pour que votre téléphone sonne directement.</p>
+                    <p>VisiDigital crée et gère une campagne Google Ads pour que votre téléphone sonne directement.</p>
+                    <div class="price">Sur devis</div>
+                    <div class="price-note">Budget publicitaire en plus, selon votre ville et secteur</div>
                     <ul>
-                        <li>Annonces ciblées sur votre quartier</li>
+                        <li>Annonces ciblées sur votre ville</li>
                         <li>Bouton "Appeler" visible sur mobile</li>
                         <li>Suivi des appels reçus</li>
                     </ul>
@@ -620,28 +744,46 @@
         </div>
     </section>
 
+    <!-- VIDEO (YouTube) -->
+    <section id="video">
+        <div class="container">
+            <div class="section-title">
+                <h2>Regardez <span>comment ça marche</span></h2>
+                <p>Découvrez en 2 minutes comment être visible sur Google partout en Côte d'Ivoire.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Comment être visible sur Google en Côte d'Ivoire"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- WHY -->
     <section id="why">
         <div class="container">
             <div class="section-title">
                 <h2>Pourquoi <span>me choisir ?</span></h2>
-                <p>Basé à Odienné, je connais le terrain et les artisans de la région.</p>
+                <p>Basé à Odienné, VisiDigital travaille à distance et se déplace dans toute la Côte d'Ivoire.</p>
             </div>
             <div class="why-grid">
                 <div class="why-card">
                     <div class="icon">📍</div>
-                    <h4>Basé à Odienné</h4>
-                    <p>Je suis à côté de vous, pas à Abidjan.</p>
+                    <h4>Présent partout en CI</h4>
+                    <p>Accompagnement à distance, avec déplacement possible dans toute la Côte d'Ivoire.</p>
                 </div>
                 <div class="why-card">
                     <div class="icon">📞</div>
-                    <h4>Résultats garantis</h4>
-                    <p>+10 appels ou je continue gratuitement.</p>
+                    <h4>Suivi transparent</h4>
+                    <p>Rapport d'appels et point d'avancement chaque mois, sans surprise.</p>
                 </div>
                 <div class="why-card">
                     <div class="icon">🔧</div>
-                    <h4>Spécialiste BTP</h4>
-                    <p>Je connais les artisans et leurs besoins.</p>
+                    <h4>Spécialiste BTP & Commerce</h4>
+                    <p>VisiDigital connaît les artisans, commerçants et leurs besoins.</p>
                 </div>
             </div>
         </div>
@@ -652,7 +794,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Des artisans <span>comme vous</span></h2>
-                <p>Des résultats réels pour des professionnels du BTP à Odienné et dans la région.</p>
+                <p>Des résultats réels pour des professionnels de Côte d'Ivoire.</p>
             </div>
             <div class="testimonials-grid">
 
@@ -669,4 +811,175 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class
+                    <div class="stars">★★★★★</div>
+                    <p>"VisiDigital m'a aidé à optimiser ma fiche Google. Aujourd'hui, je suis facilement trouvé par les clients qui cherchent un électricien à Odienné."</p>
+                    <div class="author">
+                        <div class="avatar">CB</div>
+                        <div>
+                            <div class="name">Christian Cédric Bandama</div>
+                            <div class="role">Électricien, Odienné</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Je ne savais pas que ma fiche Google était incomplète. VisiDigital m'a tout expliqué simplement. Depuis, je reçois des appels de clients sérieux."</p>
+                    <div class="author">
+                        <div class="avatar">TY</div>
+                        <div>
+                            <div class="name">Touré Yacouba</div>
+                            <div class="role">Plombier, Boundiali</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Obtenez votre <span>diagnostic gratuit</span></h2>
+                <p>VisiDigital analyse votre fiche et vous livre un plan d'action clair en 24h.</p>
+            </div>
+            <div class="contact-card">
+                <h3>📞 Contactez-moi</h3>
+                <p>Appelez-moi directement ou envoyez-moi un message WhatsApp.</p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/2250708632565?text=Bonjour%2C%20je%20suis%20artisan%20et%20je%20souhaite%20am%C3%A9liorer%20ma%20visibilit%C3%A9%20sur%20Google." target="_blank" class="contact-btn whatsapp">💬 WhatsApp</a>
+                    <a href="tel:+2250708632565" class="contact-btn call">📱 Appeler</a>
+                </div>
+                <div class="contact-email">📧 <a href="mailto:turaybusiness888@gmail.com">turaybusiness888@gmail.com</a></div>
+
+                <div class="diagnostic-form">
+                    <h4>📋 Demandez votre diagnostic gratuit</h4>
+                    <form id="diagnostic-form" novalidate>
+                        <div class="form-group" id="group-nom">
+                            <label for="nom">Votre nom complet</label>
+                            <input type="text" id="nom" placeholder="Ex: Koffi Kouadio" required minlength="2" />
+                            <div class="field-error">Merci d'indiquer votre nom complet.</div>
+                        </div>
+                        <div class="form-group" id="group-telephone">
+                            <label for="telephone">Votre numéro de téléphone</label>
+                            <input type="tel" id="telephone" placeholder="Ex: 07 08 63 25 65" required pattern="^[0-9+\s]{8,15}$" />
+                            <div class="field-error">Merci d'indiquer un numéro valide (8 à 15 chiffres).</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="metier">Votre métier</label>
+                            <select id="metier">
+                                <option value="">Sélectionnez...</option>
+                                <option value="Plombier">Plombier</option>
+                                <option value="Électricien">Électricien</option>
+                                <option value="Maçon">Maçon</option>
+                                <option value="Menuisier">Menuisier</option>
+                                <option value="Carreleur">Carreleur</option>
+                                <option value="Peintre">Peintre</option>
+                                <option value="Commerçant">Commerçant</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quartier">Votre ville / quartier</label>
+                            <input type="text" id="quartier" placeholder="Ex: Abidjan, Bouaké, Odienné, San-Pédro..." />
+                        </div>
+                        <button type="submit" class="btn-submit" id="btn-submit">📩 Recevoir mon diagnostic gratuit</button>
+                    </form>
+                    <div class="form-success" id="form-success" role="status">
+                        ✅ Merci ! Si WhatsApp ne s'est pas ouvert automatiquement, <a href="#" id="manual-whatsapp-link" style="color:#4ADE80; text-decoration:underline;">cliquez ici</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <span class="footer-brand">VisiDigital</span> — © 2026 Côte d'Ivoire<br>
+        <a href="mailto:turaybusiness888@gmail.com">turaybusiness888@gmail.com</a> | <a href="tel:+2250708632565">+225 07 08 63 25 65</a>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/2250708632565?text=Bonjour%2C%20je%20suis%20artisan%20et%20je%20souhaite%20am%C3%A9liorer%20ma%20visibilit%C3%A9%20sur%20Google." target="_blank" class="whatsapp-float" aria-label="Contacter VisiDigital sur WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Formulaire
+        const form = document.getElementById('diagnostic-form');
+        const success = document.getElementById('form-success');
+        const submitBtn = document.getElementById('btn-submit');
+
+        function showFieldError(groupId, isInvalid) {
+            const group = document.getElementById(groupId);
+            if (group) group.classList.toggle('invalid', isInvalid);
+        }
+
+        function buildWhatsAppUrl() {
+            const nom = document.getElementById('nom').value.trim();
+            const tel = document.getElementById('telephone').value.trim();
+            const metier = document.getElementById('metier').value || 'artisan';
+            const quartier = document.getElementById('quartier').value.trim() || "Côte d'Ivoire";
+            const message = `Bonjour, je suis ${nom} (${tel}). Je suis ${metier} à ${quartier}. Je souhaite un diagnostic gratuit.`;
+            return `https://wa.me/2250708632565?text=${encodeURIComponent(message)}`;
+        }
+
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const nomInput = document.getElementById('nom');
+                const telInput = document.getElementById('telephone');
+                let valid = true;
+
+                if (!nomInput.value.trim() || nomInput.value.trim().length < 2) {
+                    showFieldError('group-nom', true);
+                    valid = false;
+                } else {
+                    showFieldError('group-nom', false);
+                }
+
+                const telPattern = /^[0-9+\s]{8,15}$/;
+                if (!telPattern.test(telInput.value.trim())) {
+                    showFieldError('group-telephone', true);
+                    valid = false;
+                } else {
+                    showFieldError('group-telephone', false);
+                }
+
+                if (!valid) return;
+
+                const waUrl = buildWhatsAppUrl();
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Envoi en cours...';
+
+                // On tente d'ouvrir WhatsApp immédiatement (plus fiable que setTimeout pour éviter le blocage de popup)
+                const newTab = window.open(waUrl, '_blank');
+
+                form.style.display = 'none';
+                success.classList.add('visible');
+
+                const manualLink = document.getElementById('manual-whatsapp-link');
+                if (manualLink) {
+                    manualLink.href = waUrl;
+                    manualLink.target = '_blank';
+                }
+
+                // Si le popup a été bloqué, on laisse le lien manuel visible comme solution de repli
+                if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+                    console.warn('Popup WhatsApp probablement bloqué, lien de secours affiché.');
+                }
+            });
+
+            // Retire l'état d'erreur dès que l'utilisateur corrige le champ
+            document.getElementById('nom').addEventListener('input', () => showFieldError('group-nom', false));
+            document.getElementById('telephone').addEventListener('input', () => showFieldError('group-telephone', false));
+        }
+    </script>
+
+</body>
+</html>
